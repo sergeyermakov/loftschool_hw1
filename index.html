@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/l/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="fonts/fira/fira.css">
+<link rel="stylesheet" href="fonts/fira.css">
+<link rel="stylesheet" href="css/style.css">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+
+<body>
 	<div class="warp">
 		<div class="header">
 			<div class="logo"></div>
@@ -23,31 +26,51 @@
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="sidebar">
-				<ul class="mainmenu">
-					<li><a href="#">Обо мне</a></li>
-					<li><a href="#">Мои работы</a></li>
-					<li><a href="#">Связаться со мной</a></li>
-				</ul>				
+				
+					<ul class="mainmenu">
+						<li><a class="first"href="index.html" type="active">Обо мне</a></li>
+						<li><a class="second"href="#">Мои работы</a></li>
+						<li><a class="third"href="#">Связаться со мной</a></li>
+						<!--<li><a class="third"href="#">Связаться со мной</a></li>
+						<li><a class="third"href="#">Связаться со мной</a></li>-->
+					</ul>
+					
+				
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+							
 			</div>
 			<div class="main">
 				<div class="post">
 					<div class="heading">
-						<h2>Основная информация</h2>
+						<span>Основная информация</span>
 					</div>
 					<div class="content">
-						<div class="userpic"></div>
+						<div class="userpic"><img src="img/userpic.png"></div>
 						<ul>
-							<li>Меня зовут: Ермаков Сергей Александрович</li>
-							<li>Мой возраст: 24 года</li>
-							<li>Мой город: Москва, Россия</li>
-							<li>Моя специализация: FRONTEND разработчик</li>
-							<li>Ключевые навыки:</li>
+							<li><span class="bold">Меня зовут:</span>  Иванов Андрей Степанович</li>
+							<li><span class="bold">Мой возраст:</span> 25 лет</li>
+							<li><span class="bold">Мой город:</span> Москва, Россия</li>
+							<li><span class="bold">Моя специализация:</span> FRONTEND разработчик</li>
+							<li><span class="bold">Ключевые навыки:</span>
+								<ul class="skills">
+									<li class="badge">html</li>
+									<li class="badge">css</li>
+									<li class="badge">javascript</li>
+									<li class="badge">gulp</li>
+									<li class="badge">git</li>
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="post">
 					<div class="heading">
-						<h2>Опыт работы</h2>
+						<span>Опыт работы</span>
 					</div>
 					<div class="content">
 						
@@ -55,7 +78,7 @@
 				</div>
 				<div class="post">
 					<div class="heading">
-						<h2>Образование</h2>
+						<span>Образование</span>
 					</div>
 					<div class="content">
 						
@@ -64,13 +87,11 @@
 			</div>
 		</div>
 		
-	<div class="page-buffer"></div>
+	<div class="pagebuffer"></div>
 	</div>
 	<div class="gradient"></div>
 	<div class="footer">
 		2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.
-	</div>
-<body>
-	
+	</div>	
 </body>
 </html>

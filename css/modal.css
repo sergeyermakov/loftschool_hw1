@@ -1,0 +1,114 @@
+
+body {
+	background: rgba(0,0,0,0.5);
+}
+.addnew-window {
+	width:362px;
+	height:493px;
+	margin:100px auto auto;
+	font-family: 'fira_sansbook';
+
+}
+.addnew-heading {
+	background:#48CBE8;
+	border-bottom:9px solid #67DFFA;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-align:center;
+	height:46px;
+	line-height:46px;
+	color:#ffffff;
+	font-family: 'fira_sansregular';
+	font-size:19pt;
+	vertical-align:middle;
+	padding: 0 13px;
+}
+.addnew-heading .modalhead {
+	float: left;
+}
+.addnew-heading i {
+	float: right;
+	margin-top: 10px;
+	margin-right: 1px;
+}
+.addnew-content{
+	padding: 1px 20px 20px;
+	background: #eff3f7;
+}
+input{
+	height: 38px;
+	border: 1px solid #48cbe8;
+    border-radius: 5px;
+    width:310px;
+    margin-bottom: 3px;
+    font-family: 'fira_sanslight';
+    padding-left: 10px;
+}
+label {
+	display: block;
+	margin:10px 0 5px;
+}
+.fileform { 
+	background-color: #FFFFFF;
+	border: 1px solid #48cbe8;
+	border-radius: 5px;
+	cursor: pointer;
+	height: 38px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+	width: 320px;
+	font-family: 'fira_sanslight';
+    font-size: 13px;
+
+}
+.fileform .selectbutton { 
+	background-color: #48cbe8;
+	color: #FFFFFF;
+	float: right;
+	font-size: 16px;
+	height: 38px;
+	line-height: 20px;
+	overflow: hidden;
+	padding: 3px 6px;
+	text-align: center;
+	vertical-align: middle;
+	width: 40px;
+}
+.fileform #upload{
+	position:absolute; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	-moz-opacity: 0; 
+	filter: alpha(opacity=0); 
+	opacity: 0; 
+	font-size: 150px; 
+	height: 30px; 
+	z-index:20;
+}
+.holder-upload {
+	color: #48CBE8;
+	display: inline-block;
+	padding: 12px;
+}
+#url {
+	margin-bottom: 8px;
+}
+.addnew-content>form>textarea {
+	display: block;
+	border: 1px solid #48cbe8;
+    border-radius: 5px;
+    width:308px;
+    height:100px;
+    font-family:'fira_sanslight'; 
+    padding: 8px 0 0 10px;
+}
+.addnew-content>form>.btn {
+	padding: 0;
+	margin: 12px 0 10px 91px;
+}

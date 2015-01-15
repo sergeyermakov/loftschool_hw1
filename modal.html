@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/l/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="css/reset.css">
+
+<link rel="stylesheet" href="fonts/fira.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/modal.css">
+<head>
+	<meta charset="UTF-8">
+	<title>modal window</title>
+
+</head>
+<body>
+<div class="addnew-window">
+	<div class="addnew-heading">
+		<span class="modalhead">Добавление проекта</span>
+		<i class="fa fa-times"></i>
+	</div>
+	<div class="addnew-content clearfix">
+		<form action="#">
+			<label for="project-name">Название проекта</label>
+			<input type="text" name="project-name" id="project-name" placeholder="Введите название">
+			<label for="upload">Картинка проекта</label>
+			<div class="fileform"><span class="holder-upload">Загрузите изображение</span>
+				<div class="selectbutton">
+					<i class="fa fa-cloud-download fa-2x"></i>
+				</div>
+				<input id="upload" type="file" value="Загрузите изображение" name="upload" />
+			</div>
+			<label id="url" for="project-url">Название проекта</label>
+			<input type="text" name="project-url" id="project-name" placeholder="Введите название">
+			<label for="about">Описание</label>
+			<textarea class="area"  name="фищге" rows="5" cols="40" id="textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+			<input class="submit btn" type="submit" name="submit" value="Добавить">
+		</form>
+	</div>
+</div>
+	
+</body>
+</html>

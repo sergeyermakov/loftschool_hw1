@@ -7,7 +7,7 @@
 	Fira Sans Light, 100, 100 italic, 300, 300 italic, 400, 400 italic, 500, 500 italic, 600, 600 italic
 */
 
-html, body {
+* html body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -16,10 +16,12 @@ body {
 	background: url(../img/comppattern2.png);
 	font-family: 'fira_sansbook';
 	color:#58697A;
+	min-height: 100%;
 }
 .wrap {
 	min-height: 100%;
-	margin-bottom: -53px;
+	
+	padding-bottom: 100px;
 }
 * html .page-wrapper {
     height: 100%;
@@ -95,13 +97,13 @@ a:hover {
 .social ul li:last-child{
 	margin: 0;
 }
-.social ul li a {
+.social>ul>li>a {
 	border-bottom:none;
 	display: block;
 	height: 47px;
 	width: 47px;
 }
-.vk a {
+.vk>a {
 	background: url(../img/vk.png) no-repeat;
 	-webkit-transition: background 0.6s ease;
 	-moz-transition: background 0.6s ease;
@@ -110,7 +112,7 @@ a:hover {
 .vk a:hover {
 	background: url(../img/vk-hover.png) no-repeat;
 }
-.twitter a {
+.twitter>a {
 	background: url(../img/twitter.png) no-repeat;
 	-webkit-transition: background 0.6s ease;
 	-moz-transition: background 0.6s ease;
@@ -119,16 +121,16 @@ a:hover {
 .twitter a:hover {
 	background: url(../img/twitter-hover.png) no-repeat;
 }
-.fb a {
+.fb>a {
 	background: url(../img/fb.png) no-repeat;
 	-webkit-transition: background 0.6s ease;
 	-moz-transition: background 0.6s ease;
 	transition: background 0.6s ease;
 }
-.fb a:hover {
+.fb>a:hover {
 	background: url(../img/fb-hover.png) no-repeat;
 }
-.github a {
+.github>a {
 	background: url(../img/github.png) no-repeat;
 	-webkit-transition: background 0.6s ease;
 	-moz-transition: background 0.6s ease;
@@ -165,7 +167,7 @@ a:hover {
 	margin: 0;
 	
 }
-.sidebar ul {
+.sidebar .mainmenu {
 	display: block;
 	width:250px;
 	list-style-type:none;
@@ -184,12 +186,15 @@ a:hover {
 	display: block;
 	width: 200px;
 	font-family: 'fira_sansbook';
-	font-size: 15pt;
+	font-size: 16pt;
 	color:#959aa8;	
-	padding: 20px 15px;
+	padding: 20px 15px 33px 16px;
 	
 	text-decoration:none;
 	margin:0 10px;
+}
+.sidebar .mainmenu li:first-child a{
+	font-size: 17pt;
 }
 .sidebar .mainmenu li:not(:last-child) a{
 	border-bottom:2px solid #3ba8c0;
@@ -205,8 +210,12 @@ color:#3ba8c0;
 	color:white;
 	background: #3ba8c0;
 	margin:0;
-	width: 220px;
-	padding: 18px 15px;
+	width: 200px;
+	
+	padding: 20px 25px 33px 25px;
+	
+	text-decoration:none;
+	margin:0px;
 
 }
 .sidebar .mainmenu li:first-child a:active,
@@ -218,6 +227,7 @@ color:#3ba8c0;
 .sidebar .mainmenu li:last-child a.active{
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+	padding: 17px 25px 33px 25px;
 }
 .sidebar .mainmenu li a.inactive{
 	border:none;
@@ -225,6 +235,9 @@ color:#3ba8c0;
 .contacts{
 	list-style-type:none;
 	color:white;
+	width:250px;
+	margin: 0;
+	padding: 0;
 	
 }
 .contacts li{
@@ -296,7 +309,7 @@ color:#3ba8c0;
 }
 .post .content{
 
-	padding: 15px 0 20px 23px ;
+	padding: 15px 0 20px 8px ;
 }
 .post .content>ul {
 	font-family: 'fira_sansbook';
@@ -356,7 +369,7 @@ color:#3ba8c0;
 .job-icon, .job{
 	display:inline-block;
 	vertical-align:middle;
-	margin-top:20px;
+	margin-top:16px;
 	
 }
 .job-icon{
@@ -365,24 +378,30 @@ color:#3ba8c0;
 .job{
 
 }
+
 .job-place{
-	font-family:'fira_sansregular';
+	font-family:'fira_sansbook';
+
 }
 .job-time{
 	font-family:'fira_sanslight';
-	font-size:1em;
+	font-size:0.96em;
 }
 .portfolio-item {
 	float: left;
 	text-align:center;
-	width: 199px;
+	width: 179px;
 	height: 230px;
+	margin: 20px 15px -10px 15px;
 
+}
+.porfolio-item:first-child {
+	
 }
 .view {
    width: 179px;
    height: 125px;
-   margin: 10px;  
+     
    border: 2px solid #3ba8c0;
    border-radius:5px;
    overflow: hidden;
@@ -449,9 +468,17 @@ color:#3ba8c0;
 .third-effect:hover a.info,.third-effect:hover a.plus {
    opacity:1;
    transition-delay: 0.3s;
-   border-bottom:none;
+   
 }
-
+.third-effect:hover a.plus{
+	border-bottom:none;
+}
+.portfolio-item>a{
+	font-size: 0.8em;
+}
+.portfolio-item>span{
+	font-size: 0.9em;
+}
 .add {
 	border: 2px dashed #3ba8c0;
 }
@@ -461,44 +488,124 @@ color:#3ba8c0;
 .contact-head{
 	
 	background:#48CBE8;
-	border-bottom:15px solid #67DFFA;
+	border-bottom:18px solid #67DFFA;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
 	overflow:hidden;
 	white-space:nowrap;
 	text-align:center;
-	height:100px;
-	line-height:100px;
+	height:120px;
+	line-height:120px;
 	color:#ffffff;
 	font-size:19pt;
 	vertical-align:middle;
 }
 .contact-body{
+	padding:40px 125px;
 	background:#eff3f7;
 	border-bottom-left-radius:5px;
 	border-bottom-right-radius:5px;
+	font-family: 'fira_sanslight';
+	font-size: 14pt; 
 	
 }
 .text-input{
 	display: block;
-	float:left;
-  margin: 0 6px;
-  padding: 4px;
-  width: 150px;
-  border: 1px solid #48CBE8;
-  border-radius: 3px;
-  color: #6C6C6C;
-  transition: all 0.4s ease-out;
+	margin: 0;
+	padding: 10px 46px 10px 10px;
+	
+	border: 1px solid #48CBE8;
+	border-radius: 3px;
+	font-family: 'fira_sanslight';
+	font-size: 9pt;
+	color: #48CBE8;
+	transition: all 0.4s ease-out;
 }
 
-.page-buffer {
-    height: 53px;
+.text-input:focus{
+
+}
+.input-label {
+	margin-bottom: 10px;
+	display: inline-block;
+	float:left;
+}
+input::-webkit-input-placeholder {color:#48CBE8;}
+input::-moz-placeholder          {color:#48CBE8;}/* Firefox 19+ */
+input:-moz-placeholder           {color:#48CBE8;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:#48CBE8;}
+textarea::-webkit-input-placeholder {color:#48CBE8;}
+textarea::-moz-placeholder          {color:#48CBE8;}
+textarea:-moz-placeholder           {color:#48CBE8;}
+textarea:-ms-input-placeholder      {color:#48CBE8;}
+
+.name{
+	margin-right: 20px;
+}
+.name-input, .email-input{
+	width:132px;
+}
+.area{
+	width:344px;
+	height:160px;
+	outline: none;
+	resize:none;
+	overflow: auto;
+}
+.captcha {
+	padding-top: 5px;
+	font-size: 12pt;
+}
+.btn {
+	width: 139px;
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: ;
+	border:0 solid transparent;
+	border-radius: 3px;
+	
+	transition: 0.2s;
+	font-family: 'fira_sansbook';
+	font-size: 14pt;
+
+}
+
+.submit{
+	float:left;
+	background: #48cbe8;
+	box-shadow: 0 -3px #3ba8c0 inset;
+}
+.submit:hover { 
+	background: #3ba8c0; 
+}
+.submit:active {
+	background: #48cbe8;
+	box-shadow: 0 3px #3ba8c0 inset;
+}
+.reset {
+	float:right;
+	background: #849db5;
+	box-shadow: 0 -3px #687b8f inset;
+}
+.reset:hover { 
+	background: #687b8f; 
+}
+.reset:active {
+	background: #849db5;
+	box-shadow: 0 3px #687b8f inset;
 }
 .copyright {
 	display:inline-block;
 }
 .footer {
-	padding:20px 0;
+	bottom: 0;
+	height: 80px;
+	line-height: 80px;
+	margin-top: 13px;
+	padding:0;
+	font-family: 'fira_sanslight';
+	font-size: 10pt;
 	text-align:center;	
 	background: #eff3f7;
 }

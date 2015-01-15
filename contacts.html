@@ -61,29 +61,39 @@
 					<div class="contact-head">
 						У Вас интересный проект? Напишите мне
 					</div>
-					<div class="contact-body">
+					<div class="contact-body clearfix">
 						<form action="#">
-						Имя
-						<input class="text-input" type="text" name="name" value="Как к Вам обращаться" size="20">
-						Email	
-						<input class="text-input" type="text" name="email" value="Куда мне писать" size="20"><br>
-						Сообщение<br>
-						<textarea class="text-input" rows="10" cols="45" name="text">Кратко в чем суть</textarea><br>
-						Введите код, указанный на картинке<br>
-						<input class="text-input" type="text" name="captcha" value="Введите код" size="20"><br>
-						<input type="submit" name="submit" value="Отправить" size="20">
-						<input type="reset" name="reset" value="Очистить" size="20">
+
+						<div class="input-label name">
+							<label for="name">Имя</label>
+							<input class="text-input name-input" type="text" name="name" placeholder="Как к Вам обращаться" id="name">
+						</div>
+						<div class="input-label email">
+							<label for="email">Email</label>	
+							<input class="text-input email-input" type="text" name="email" placeholder="Куда мне писать" id="email">
+						</div><br>
+						<div class="input-label textarea">
+							<label for="textarea">Сообщение</label>
+							<textarea class="text-input area" rows="8" cols="54" name="text" id="textarea" placeholder="Кратко в чем суть"></textarea>
+						</div><br>
+						<div class="input-label captcha">
+							<label for="message">Введите код, указанный на картинке</label><br>
+							<input class="text-input" type="text" name="captcha" placeholder="Введите код" id="message"><br>
+						</div>
+						<input class="submit btn" type="submit" name="submit" value="Отправить">
+						<input class="reset btn" type="reset" name="reset" value="Очистить" >
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		
-	<div class="pagebuffer"></div>
+
 	</div>
-	<div class="gradient"></div>
+	
 	<div class="footer">
-		2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.
+	<div class="gradient"></div>
+		<i class="fa fa-copyright"></i> 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.
 	</div>	
 </body>
 </html>

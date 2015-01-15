@@ -14,10 +14,22 @@
 
 </head>
 <body>
-<div class="addnew-window">
+<script type="text/javascript">
+
+					//Функция показа
+			function show(state){
+
+					document.getElementById('addnew-window').style.display = state;			
+					document.getElementById('modalback').style.display = state; 			
+			}
+			
+		</script>
+		<div onclick="show('none')" id="modalback"></div>
+		<button class="myButton" onclick="show('block')">Показать окно</button>
+<div class="addnew-window" id="addnew-window">
 	<div class="addnew-heading">
 		<span class="modalhead">Добавление проекта</span>
-		<i class="fa fa-times"></i>
+		<i class="fa fa-times" onclick="show('none')"></i>
 	</div>
 	<div class="addnew-content clearfix">
 		<form action="#">

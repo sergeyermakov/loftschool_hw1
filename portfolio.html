@@ -5,12 +5,49 @@
 <link rel="stylesheet" href="fonts/fira.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/modal.css">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
 
 <body>
+
+		<script type="text/javascript">
+
+					//Функция показа
+			function show(state){
+
+					document.getElementById('addnew-window').style.display = state;			
+					document.getElementById('modalback').style.display = state; 			
+			}
+			
+		</script>
+		<div onclick="show('none')" id="modalback"></div>
+		<div class="addnew-window" id="addnew-window">
+	<div class="addnew-heading">
+		<span class="modalhead">Добавление проекта</span>
+		<i class="fa fa-times" onclick="show('none')"></i>
+	</div>
+	<div class="addnew-content clearfix">
+		<form action="#">
+			<label for="project-name">Название проекта</label>
+			<input type="text" name="project-name" id="project-name" placeholder="Введите название">
+			<label for="upload">Картинка проекта</label>
+			<div class="fileform"><span class="holder-upload">Загрузите изображение</span>
+				<div class="selectbutton">
+					<i class="fa fa-cloud-download fa-2x"></i>
+				</div>
+				<input id="upload" type="file" value="Загрузите изображение" name="upload" />
+			</div>
+			<label id="url" for="project-url">Название проекта</label>
+			<input type="text" name="project-url" id="project-name" placeholder="Введите название">
+			<label for="about">Описание</label>
+			<textarea class="area"  name="фищге" rows="5" cols="40" id="textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+			<input class="submit btn" type="submit" name="submit" value="Добавить">
+		</form>
+	</div>
+</div>
 	<div class="warp">
 		<div class="header">
 			<div class="logo"></div>
@@ -111,7 +148,7 @@
 								<img src="img/addnew.png" />  
 								<div class="mask"></div>
   								<div class="gotolink">  
-    								<a href="#" class="plus" title="Add new project"><i class="fa fa-plus-square fa-2x"></i><br><br>Добавить проект</a>  
+    								<a href="#" class="plus" title="Add new project" onclick="show('block')"><i class="fa fa-plus-square fa-2x"></i><br><br>Добавить проект</a>  
   								</div>  
 							</div>
 						</div>

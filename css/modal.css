@@ -1,7 +1,5 @@
 
-body {
-	background: rgba(0,0,0,0.5);
-}
+
 .addnew-window {
 	width:362px;
 	height:493px;
@@ -34,8 +32,10 @@ body {
 	margin-right: 1px;
 }
 .addnew-content{
-	padding: 1px 20px 20px;
+	padding: 1px 20px 0px 20px;
 	background: #eff3f7;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;  
 }
 input{
 	height: 38px;
@@ -112,3 +112,31 @@ label {
 	padding: 0;
 	margin: 12px 0 10px 91px;
 }
+#modalback{
+		display: none;
+		opacity: 0.8;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 16px;
+		background-color: rgba(88, 105, 122, 0.75);
+		z-index: 100;
+		overflow: auto;
+}
+	#addnew-window{
+		
+		margin: 50px auto;
+		display: none;
+		width:362px;
+	height:483px;
+		z-index: 200;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}

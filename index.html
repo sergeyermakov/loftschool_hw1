@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="fonts/fira.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -28,24 +29,35 @@
 			<div class="sidebar">
 				
 					<ul class="mainmenu">
-						<li><a class="first"href="index.html" type="active">Обо мне</a></li>
-						<li><a class="second"href="#">Мои работы</a></li>
-						<li><a class="third"href="#">Связаться со мной</a></li>
+						<li><a class="active" href="index.html" type="active">Обо мне</a></li>
+						<li><a class="" href="portfolio.html">Мои работы</a></li>
+						<li><a class="inactive" href="contacts.html">Связаться со мной</a></li>
 						<!--<li><a class="third"href="#">Связаться со мной</a></li>
 						<li><a class="third"href="#">Связаться со мной</a></li>-->
 					</ul>
 					
 				
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+					<ul class="contacts">
+						<li>
+							Контакты
+						</li>
+						<li>
+							<i  class="fa fa-envelope-o fa-lg"></i>&nbsp; 
+							<a href="mailto:xom94ok@gmail.com">xom94ok@gmail.com</a>
+						</li>
+						<li>
+							<i  class="fa fa-phone fa-lg"></i>&nbsp; 
+							<a href="tel:+79161227266">+7 (916) 122-72-66</a>
+						</li>
+						<li>
+							<i  class="fa fa-skype fa-lg"></i>&nbsp; 
+							<a href="skype:xrum94ok?call">xrum94ok</a>
+						</li>
 					</ul>
 							
 			</div>
 			<div class="main">
-				<div class="post">
+				<div class="post clearfix">
 					<div class="heading">
 						<span>Основная информация</span>
 					</div>
@@ -68,20 +80,50 @@
 						</ul>
 					</div>
 				</div>
-				<div class="post">
+				<div class="post clearfix">
 					<div class="heading">
 						<span>Опыт работы</span>
 					</div>
 					<div class="content">
-						
+						<div class="job-icon">
+							<i class="fa fa-suitcase fa-2x"></i>
+						</div>
+						<div  class="job">
+							<span class="job-place">ЗАО "НПФ "Техноякс" - Системный администратор</span>
+							<br>
+							<span class="job-time">Июль 2009 - по настоящее время</span>
+						</div><br>
+						<div class="job-icon">
+							<i class="fa fa-suitcase fa-2x"></i>
+						</div>
+						<div  class="job">
+							<span class="job-place">ООО "Сеть" - Сетевой инженер</span>
+							<br>
+							<span class="job-time">Январь 2013 - по настоящее время</span>
+						</div>
 					</div>
 				</div>
-				<div class="post">
+				<div class="post clearfix">
 					<div class="heading">
 						<span>Образование</span>
 					</div>
 					<div class="content">
-						
+						<div class="job-icon">
+							<i class="fa fa-graduation-cap fa-2x"></i>
+						</div>
+						<div  class="job">
+							<span class="job-place">Среднее специальное. МГКИТ</span>
+							<br>
+							<span class="job-time">Сентябрь 2006 - Июль 2010</span>
+						</div><br>
+						<div class="job-icon">
+							<i class="fa fa-graduation-cap fa-2x"></i>
+						</div>
+						<div  class="job">
+							<span class="job-place">Высшее. МЭИ (ТУ)</span>
+							<br>
+							<span class="job-time">Сентябрь 2010 - Март 2014</span>
+						</div>
 					</div>
 				</div>
 			</div>

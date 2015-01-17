@@ -1,5 +1,4 @@
 
-
 .addnew-window {
 	width:362px;
 	height:493px;
@@ -32,10 +31,13 @@
 	margin-right: 1px;
 }
 .addnew-content{
+
+	padding: 1px 20px 20px;
 	padding: 1px 20px 0px 20px;
 	background: #eff3f7;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;  
+
 }
 input{
 	height: 38px;
@@ -111,6 +113,7 @@ label {
 .addnew-content>form>.btn {
 	padding: 0;
 	margin: 12px 0 10px 91px;
+
 }
 #modalback{
 		display: none;
@@ -140,3 +143,4 @@ label {
 		border-radius: 5px;
 		box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	}
+

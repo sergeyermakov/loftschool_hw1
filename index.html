@@ -9,10 +9,6 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
-<script src="IE8.js">IE7_PNG_SUFFIX=".png";</script>
-<!--[if lt IE 8]>
-<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-<![endif]-->
 <body>
 	<div class="warp">
 		<div class="header">
@@ -32,9 +28,9 @@
 			<div class="sidebar">
 				
 					<ul class="mainmenu">
-						<li><a class="active" href="index.html" type="active">Обо мне</a></li>
+						<li class="active"><a  href="index.html">Обо мне</a></li>
 						<li><a class="" href="portfolio.html">Мои работы</a></li>
-						<li><a class="inactive" href="contacts.html">Связаться со мной</a></li>
+						<li><a href="contacts.html">Связаться со мной</a></li>
 						<!--<li><a class="third"href="#">Связаться со мной</a></li>
 						<li><a class="third"href="#">Связаться со мной</a></li>-->
 					</ul>
@@ -65,44 +61,50 @@
 						<span>Основная информация</span>
 					</div>
 					<div class="content">
-						<div class="userpic"><img src="img/userpic.png"></div>
-						<ul>
-							<li><span class="bold">Меня зовут:</span>  Иванов Андрей Степанович</li>
-							<li><span class="bold">Мой возраст:</span> 25 лет</li>
-							<li><span class="bold">Мой город:</span> Москва, Россия</li>
-							<li><span class="bold">Моя специализация:</span> FRONTEND разработчик</li>
-							<li><span class="bold">Ключевые навыки:</span>
-								<ul class="skills">
-									<li class="badge">html</li>
-									<li class="badge">css</li>
-									<li class="badge">javascript</li>
-									<li class="badge">gulp</li>
-									<li class="badge">git</li>
-								</ul>
-							</li>
-						</ul>
+						<div class="info">
+							<div class="userpic"><img src="img/userpic.png"></div>
+							<ul>
+								<li><span class="bold">Меня зовут:</span>  Иванов Андрей Степанович</li>
+								<li><span class="bold">Мой возраст:</span> 25 лет</li>
+								<li><span class="bold">Мой город:</span> Москва, Россия</li>
+								<li><span class="bold">Моя специализация:</span> FRONTEND разработчик</li>
+								<li><span class="bold">Ключевые навыки:</span>
+									<ul class="skills">
+										<li class="skill-html"></li>
+										<li class="skill-css"></li>
+										<li class="skill-js"></li>
+										<li class="skill-gulp"></li>
+										<li class="skill-git"></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="post clearfix">
 					<div class="heading">
 						<span>Опыт работы</span>
 					</div>
-					<div class="content">
-						<div class="job-icon">
-							<i class="fa fa-suitcase fa-2x"></i>
-						</div>
-						<div  class="job">
-							<span class="job-place">ЗАО "НПФ "Техноякс" - Системный администратор</span>
-							<br>
-							<span class="job-time">Июль 2009 - по настоящее время</span>
+					<div class="content clearfix">
+						<div class="job-item">
+							<div class="job-icon">
+								<i class="fa fa-suitcase fa-2x"></i>
+							</div>
+							<div  class="job">
+								<span class="job-place">ЗАО "НПФ "Техноякс" - Системный администратор</span>
+								<br>
+								<span class="job-time">Июль 2009 - по настоящее время</span>
+							</div>
 						</div><br>
-						<div class="job-icon">
-							<i class="fa fa-suitcase fa-2x"></i>
-						</div>
-						<div  class="job">
-							<span class="job-place">ООО "Сеть" - Сетевой инженер</span>
-							<br>
-							<span class="job-time">Январь 2013 - по настоящее время</span>
+						<div class="job-item">
+							<div class="job-icon">
+								<i class="fa fa-suitcase fa-2x"></i>
+							</div>
+							<div  class="job">
+								<span class="job-place">ООО "Сеть" - Сетевой инженер</span>
+								<br>
+								<span class="job-time">Январь 2013 - по настоящее время</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -111,21 +113,25 @@
 						<span>Образование</span>
 					</div>
 					<div class="content">
-						<div class="job-icon">
-							<i class="fa fa-graduation-cap fa-2x"></i>
-						</div>
-						<div  class="job">
-							<span class="job-place">Среднее специальное. МГКИТ</span>
-							<br>
-							<span class="job-time">Сентябрь 2006 - Июль 2010</span>
+						<div class="job-item">
+							<div class="job-icon">
+								<i class="fa fa-graduation-cap fa-2x"></i>
+							</div>
+							<div  class="job">
+								<span class="job-place">Среднее специальное. МГКИТ</span>
+								<br>
+								<span class="job-time">Сентябрь 2006 - Июль 2010</span>
+							</div>
 						</div><br>
-						<div class="job-icon">
-							<i class="fa fa-graduation-cap fa-2x"></i>
-						</div>
-						<div  class="job">
-							<span class="job-place">Высшее. МЭИ (ТУ)</span>
-							<br>
-							<span class="job-time">Сентябрь 2010 - Март 2014</span>
+						<div class="job-item">
+							<div class="job-icon">
+								<i class="fa fa-graduation-cap fa-2x"></i>
+							</div>
+							<div  class="job">
+								<span class="job-place">Высшее. МЭИ (ТУ)</span>
+								<br>
+								<span class="job-time">Сентябрь 2010 - Март 2014</span>
+							</div>
 						</div>
 					</div>
 				</div>

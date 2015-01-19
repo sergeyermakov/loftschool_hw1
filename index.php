@@ -1,61 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script src="http://ajax.googleapis.com/ajax/l/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="fonts/fira.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-</head>
-<body>
-	<div class="warp">
-		<div class="header">
-			<div class="logo"></div>
-			<div class="social">
-				<ul>
-					<li class="vk"><a href="https://vk.com/ermakov_s"></a></li>
-					<li class="twitter"><a href="https://twitter.com/xom94ok"></a></li>
-					<li class="fb"><a href="https://www.facebook.com/sergey.ermakov.186"></a></li>
-					<li class="github"><a href="https://github.com/sergeyermakov"></a></li>
-				</ul>
-			</div>
-
-		</div>
-		<div class="gradient"></div>
-		<div class="container">
-			<div class="sidebar">
-				
-					<ul class="mainmenu">
-						<li class="active"><a  href="index.html">Обо мне</a></li>
-						<li><a class="" href="portfolio.html">Мои работы</a></li>
-						<li><a href="contacts.html">Связаться со мной</a></li>
-						<!--<li><a class="third"href="#">Связаться со мной</a></li>
-						<li><a class="third"href="#">Связаться со мной</a></li>-->
-					</ul>
-					
-				
-					<ul class="contacts">
-						<li>
-							Контакты
-						</li>
-						<li>
-							<i  class="fa fa-envelope-o fa-lg"></i>&nbsp; 
-							<a href="mailto:xom94ok@gmail.com">xom94ok@gmail.com</a>
-						</li>
-						<li>
-							<i  class="fa fa-phone fa-lg"></i>&nbsp; 
-							<a href="tel:+79161227266">+7 (916) 122-72-66</a>
-						</li>
-						<li>
-							<i  class="fa fa-skype fa-lg"></i>&nbsp; 
-							<a href="skype:xrum94ok?call">xrum94ok</a>
-						</li>
-					</ul>
-							
-			</div>
+<?
+include 'header.php';
+include 'nav.php';
+?>
 			<div class="main">
 				<div class="post clearfix">
 					<div class="heading">
@@ -142,9 +88,6 @@
 	
 	</div>
 	
-	<div class="footer">
-	<div class="gradient"></div>
-		<i class="fa fa-copyright"></i> 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.
-	</div>	
-</body>
-</html>
+<?php 
+    include 'footer.php';
+ ?>

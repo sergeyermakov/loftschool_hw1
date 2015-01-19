@@ -39,6 +39,7 @@
   text-decoration: none;
   background-color: #f97e76;
   border-radius: 4px;
+  white-space: nowrap;
 }
 .tooltip-arrow {
   position: absolute;

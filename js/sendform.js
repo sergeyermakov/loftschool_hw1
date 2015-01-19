@@ -13,7 +13,7 @@
 
         setUpListeners: function() {
             $('form').on('submit', app.submitForm);
-            $('form').on('keydown','.text-input', app.removeError);
+            $('form').on('keydown click', '.text-input', app.removeError);
         },
 
         submitForm: function(e) {
@@ -23,34 +23,33 @@
                 submitBtn = form.find('button[type="submit"]');
 
             if (app.validateForm(form) === false) return false;
-
-            submitBtn.attr('disabled', 'disabled');
-
-            console.log('go in ajax');
+            
+            
 
             var str = form.serialize();
-
-            $.ajax({
-                url: 'contact_form/contact_process.php',
-                type: 'POST',
-                data: str,
-            })
-            .done(function() {
-                console.log("success");
-            })
-            .fail(function() {
-                console.log("error");
-            })
-            .always(function() {
-                console.log("complete");
-            });
             
+            submitBtn.attr('disabled', 'disabled');
+
+            if (form.hasClass('ajaxmail')){
+            $.ajax({
+                    url: 'send_email.php',
+                    type: 'POST',
+                    data: str
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    submitBtn.removeAttr('disabled');
+                });
+            };
+
         },
 
         validateForm: function(form) {
             var inputs = form.find('.text-input'),
                 valid = true;
-
+                
             inputs.tooltip('destroy');
 
             $.each(inputs, function(index, val) {
@@ -60,14 +59,15 @@
                     label = formGroup.find('label').text().toLowerCase(),
                     textError = 'Вы не ввели ' + label,
                     position = null;
+                    
+                    
 
                 if (formGroup.hasClass('left')) {
                     position = 'left';
                 }
                 if (formGroup.hasClass('right')) {
                     position = 'right';
-                }
-                else {};
+                } else {};
 
                 if (val.length === 0) {
                     formGroup.addClass('has-error');
@@ -76,18 +76,20 @@
                         placement: position,
                         title: textError
                     }).tooltip('show');
-                    valid === false;
+                    valid = false;
                 } else {
                     formGroup.removeClass('has-error');
+                    input.tooltip('hide');
                 }
 
-               
+                
             });
             return valid;
         },
 
-        removeError: function (){
+        removeError: function() {
             $(this).tooltip('destroy').parents('.input-label').removeClass('has-error');
+            $(this).removeClass('has-error').find('input').tooltip('destroy');
         }
 
     }

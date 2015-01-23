@@ -1,74 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт портфолио</title>
 
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="fonts/fira.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/modal.css">
+    
+    
 
+    
 </head>
 
 <body>
 
-<div onclick="show('none')" id="modalback"></div>
-    <div class="addnew-window" id="addnew-window">
-        <div class="addnew-heading">
-            <span class="modalhead">Добавление проекта</span>
-            <i class="fa fa-times" onclick="show('none')"></i>
-        </div>
-        <div class="addnew-content clearfix">
-            <form action="#" class="addnew-form">
-                <div class="input-label right">
-                    <label for="project-name">Название проекта</label>
-                    <input class="text-input" type="text" name="project-name" id="project-name" placeholder="Введите название">
-                </div>
-                <div class="input-label right">
-                    <label for="upload">Картинка проекта</label>
-                    <div class="file_upload" >
-                    
-                        <button type="button"><i class="fa fa-cloud-download fa-2x"></i></button>
-                        <div >Файл не выбран</div>
-                        <input type="file" class="text-input" >
-                    </div>
-                </div>
-                <div class="input-label right">
-                    <label id="url" for="project-url">URL проекта</label>
-                    <input type="text" class="text-input" name="project-url" id="project-name" placeholder="Добавьте ссылку">
-                </div>
-                <div class="input-label right">
-                    <label for="about">Описание</label>
-                    <textarea class="area text-input" name="about" rows="5" cols="40" id="about" placeholder="Пара слов о Вашем проекте"></textarea>
-                </div>
-                <input class="submit btn" type="submit" name="submit" value="Добавить">
-            </form>
-        </div>
-    </div>
-    <div class="warp">
+<!--[if IE 8]>
+    <script type="text/javascript">
+        $(document).ready(function(){  
+            $('ul.portfolio>li:nth-child(3n+3)').css('margin-right','0px !important');
+        });
+    </script>
+<style type="text/css">
+	.gradient {
+		background: url('img/gradient.png') top repeat-y;
+        backaground-size: 100%;
+        background-color:#EFF3F7;
+	}
+</style>
+    <![endif]-->
+
+    <div class="wrap">
         <div class="header">
-            <div class="logo"></div>
+            <div class="logo"><a href="index.php"></a></div>
             <div class="social">
                 <ul>
-                    <li class="vk">
+                    <li class="vk swing">
                         <a href="https://vk.com/ermakov_s"></a>
                     </li>
-                    <li class="twitter">
+                    <li class="twitter swing">
                         <a href="https://twitter.com/xom94ok"></a>
                     </li>
-                    <li class="fb">
+                    <li class="fb swing">
                         <a href="https://www.facebook.com/sergey.ermakov.186"></a>
                     </li>
-                    <li class="github">
+                    <li class="github swing">
                         <a href="https://github.com/sergeyermakov"></a>
                     </li>
                 </ul>
-            </div>
+                <div class="mobilenav">
 
+                        <a href="#" class="sm open">                            
+                            <i class="fa fa-bars fa-2x showmenu"></i>
+                        </a>
+                        <ul class="mainmenu" id="showmenu">
+                            <li>
+                                <div class="arrow"></div>
+                                <a href="index.php" type="active">Обо мне</a>
+                            </li>
+                            <li><a href="portfolio.php">Мои работы</a>
+                            </li>
+                            <li ><a href="contactform.php">Связаться со мной</a>
+                            </li>
+                        </ul>
+
+                </div>
+            </div>
+            
         </div>
         <div class="gradient"></div>
         <div class="container">

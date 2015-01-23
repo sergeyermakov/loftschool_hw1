@@ -20,36 +20,48 @@
             e.preventDefault();
 
             var form = $(this),
-                submitBtn = form.find('button[type="submit"]');
+                submitBtn = form.find('button[type="submit"]' || 'input[type="submit"]');
 
             if (app.validateForm(form) === false) return false;
-            
-            
+
+
 
             var str = form.serialize();
-            
-            submitBtn.attr('disabled', 'disabled');
 
-            if (form.hasClass('ajaxmail')){
-            $.ajax({
-                    url: 'send_email.php',
-                    type: 'POST',
-                    data: str
-                })
-                .fail(function() {
-                    console.log("error");
-                })
-                .always(function() {
-                    submitBtn.removeAttr('disabled');
-                });
-            };
+            
+
+            if (form.hasClass('ajaxmail')) {
+                submitBtn.attr('disabled', 'disabled');
+                
+                $.ajax({
+                        url: '../send_email',
+                        type: 'POST',
+                        data: str,
+                    })
+                    .done(function(msg) {
+                        if (msg === "OK") {
+                            var result = "<div = 'bg-success'>Спасибо за заявку! Мы вам перезвоним!</div>"
+                            form.html(result);
+                        } else {
+                            form.html(msg);
+                        }
+                    })
+                    .fail(function() {
+                        console.log("error");
+                    })
+                    .always(function() {
+                        submitBtn.removeAttr('disabled');
+                    });
+            } 
+
+
 
         },
 
         validateForm: function(form) {
             var inputs = form.find('.text-input'),
                 valid = true;
-                
+
             inputs.tooltip('destroy');
 
             $.each(inputs, function(index, val) {
@@ -58,14 +70,14 @@
                     formGroup = input.parents('.input-label'),
                     label = formGroup.find('label').text().toLowerCase(),
                     textError = 'Вы не ввели ' + label,
-                    position = null;
-                    
-                    
+                    position = null,
+                    sw = screen.width;
 
-                if (formGroup.hasClass('left')) {
+                if (sw <= 414) {
+                    position = 'top'
+                } else if (formGroup.hasClass('left')) {
                     position = 'left';
-                }
-                if (formGroup.hasClass('right')) {
+                } else if (formGroup.hasClass('right')) {
                     position = 'right';
                 } else {};
 
@@ -82,7 +94,7 @@
                     input.tooltip('hide');
                 }
 
-                
+
             });
             return valid;
         },

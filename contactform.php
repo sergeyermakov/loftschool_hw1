@@ -38,15 +38,22 @@ include 'nav.php';
                                 
                             </div>
                             <br>
-                            <div class="input-label captcha right">
+                            <div class="input-label right" id="capcha">
+                            
+                            
+
                                 Введите 
                                 <label for="inputCaptha">код</label>, указанный на картинке
                                 <br>
+                                <img id="captcha" src="./securimage/securimage_show.php" alt="CAPTCHA Image" style="width: 188px; border: 1px solid #48CBE8; border-radius: 3px;"/>
                                 
-                                    <input class="text-input" type="text" name="captcha" placeholder="Введите код" id="inputCaptha">
-                                    
+                                    <input class="text-input capcha-input" type="text" name="captcha_code" maxlength="6" placeholder="Введите код" id="inputCaptha">
+                                    <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false">другая картинка</a>
+
                                 
 
+                                <br>
+                                <br>
                                 <br>
                             </div>
 

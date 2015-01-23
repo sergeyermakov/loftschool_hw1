@@ -11,8 +11,8 @@ include 'nav.php';
 						<div class="info">
 							<div class="userpic"><img src="img/userpic.png"></div>
 							<ul>
-								<li><span class="bold">Меня зовут:</span>  Иванов Андрей Степанович</li>
-								<li><span class="bold">Мой возраст:</span> 25 лет</li>
+								<li><span class="bold">Меня зовут:</span>  Ермаков Сергей Александрович</li>
+								<li><span class="bold">Мой возраст:</span> 24 года</li>
 								<li><span class="bold">Мой город:</span> Москва, Россия</li>
 								<li><span class="bold">Моя специализация:</span> FRONTEND разработчик</li>
 								<li><span class="bold">Ключевые навыки:</span>
@@ -78,6 +78,16 @@ include 'nav.php';
 								<span class="job-place">Высшее. МЭИ (ТУ)</span>
 								<br>
 								<span class="job-time">Сентябрь 2010 - Март 2014</span>
+							</div>
+						</div><br>
+						<div class="job-item">
+							<div class="job-icon">
+								<i class="fa fa-file-text-o fa-2x"></i>
+							</div>
+							<div  class="job">
+								<span class="job-place">Курсы Loftschool</span>
+								<br>
+								<span class="job-time">Январь 2015 - по настоящее время</span>
 							</div>
 						</div>
 					</div>

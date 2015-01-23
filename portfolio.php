@@ -3,6 +3,47 @@ include 'header.php';
 include 'nav.php';
 ?>
 
+
+
+
+<div onclick="show('none')" id="modalback"></div>
+    <div class="addnew-window" id="addnew-window">
+        <div class="addnew-heading">
+            <span class="modalhead">Добавление проекта</span>
+            <i class="fa fa-times rotate" onclick="show('none')"></i>
+        </div>
+        <div class="addnew-content clearfix">
+            <form method="post" action=""  enctype="multipart/form-data" class="addnew-form">
+                <div class="input-label right">
+                    <label for="projectname">Название проекта</label>
+                    <input class="text-input" type="text" name="projectname" id="projectname" placeholder="Введите название">
+                </div>
+                <div class="input-label right">
+                    <label for="fileupload">Картинка проекта</label>
+                    <div class="file_upload" >
+                    
+                        <button type="button"><i class="fa fa-cloud-download fa-2x"></i></button>
+                        <div >Файл не выбран</div>
+                        <input type="file" name="fileupload" class="text-input" id="fileupload">
+                    </div>
+                    <div id="progress">
+                        <div class="bar" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="input-label right">
+                    <label id="url" for="projecturl">URL проекта</label>
+                    <input type="text" class="text-input" name="projecturl" id="projecturl" placeholder="Добавьте ссылку">
+                </div>
+                <div class="input-label right">
+                    <label for="about">Описание</label>
+                    <textarea class="area text-input" name="about" rows="5" cols="40" id="about" placeholder="Пара слов о Вашем проекте"></textarea>
+                </div>
+                <input class="submit btn" type="submit" name="submit" value="Добавить">
+            </form>
+        </div>
+    </div>
+
+
             <div class="main">
                 <div class="post clearfix">
                     <div class="heading">
@@ -77,7 +118,6 @@ include 'nav.php';
                 </div>
             </div>
         </div>
-
 
     </div>
 <?php 

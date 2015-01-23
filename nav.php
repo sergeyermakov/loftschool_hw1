@@ -17,15 +17,15 @@
                     <li>
                         Контакты
                     </li>
-                    <li>
+                    <li class="slide">
                         <i class="fa fa-envelope-o fa-lg"></i>&nbsp;
                         <a href="mailto:xom94ok@gmail.com">xom94ok@gmail.com</a>
                     </li>
-                    <li>
+                    <li class="slide">
                         <i class="fa fa-phone fa-lg"></i>&nbsp;
                         <a href="tel:+79161227266">+7 (916) 122-72-66</a>
                     </li>
-                    <li>
+                    <li class="slide">
                         <i class="fa fa-skype fa-lg"></i>&nbsp;
                         <a href="skype:xrum94ok?call">xrum94ok</a>
                     </li>
